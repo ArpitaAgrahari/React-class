@@ -1,4 +1,4 @@
-/*
+
 //Global var 
 var global = "I am global"
 console.log(global);
@@ -99,7 +99,7 @@ function letHoisting(){
 }
 letHoisting();
 
-*/
+
 //const declaration
 //const is block scoped
 //const is not hoisted
