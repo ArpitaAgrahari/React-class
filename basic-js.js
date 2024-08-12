@@ -76,6 +76,8 @@ function letScope(){
     console.log(x); //10
 }
 letScope();
+//let keyword redeclartion is not allowed in same scope
+//let keyword reassignment is allowed in same scope
 
 
 
