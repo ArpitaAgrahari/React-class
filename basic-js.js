@@ -13,9 +13,11 @@ function myLocal() {
 // local is declared inside the function so it is local to the function
 // global is declared outside the function so it is global to the function
 
+
 //REDECLARATION In var
 */
 function abc(){
     var x = 10;
-    console.log(x);
+    var x = 20;   // redeclaration is allowed in var if we want to change the value of x
+    console.log(x);     //redeclaration is allowed only in same scope
 }
