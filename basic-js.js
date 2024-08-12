@@ -48,7 +48,7 @@ function x(){
 }
 x();
 
-*/
+
 
 //Let declaration
 //let is block scoped
@@ -63,4 +63,18 @@ function letDeclaration(){
     console.log(x);
 }
 letDeclaration();
+
+*/
+
+//scope of let
+function letScope(){
+    let x = 10;
+    if(true){
+        let x = 20;
+        console.log(x); //20
+    }
+    console.log(x); //10
+}
+letScope();
+
 
