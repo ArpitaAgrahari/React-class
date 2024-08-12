@@ -21,3 +21,6 @@ function abc(){
     var x = 20;   // redeclaration is allowed in var if we want to change the value of x
     console.log(x);     //redeclaration is allowed only in same scope
 }
+abc();
+var x =5; 
+abc(); //20
