@@ -36,7 +36,7 @@ console.log(y);
 }
 abcd();
 
-*/
+
 //Hoisting
 //a variable can be used before it has been declared 
 //Hoisting is JavaScript's default behavior of moving declarations to the top.
@@ -47,3 +47,20 @@ function x(){
     console.log(a); //10
 }
 x();
+
+*/
+
+//Let declaration
+//let is block scoped
+//let is not hoisted
+//let can not be redeclared
+//let can be reassigned
+function letDeclaration(){
+    let x = 10;
+    console.log(x);
+    //let x = 20; //error : redeclaration is not allowed in let
+    x = 20; //reassignment is allowed in let
+    console.log(x);
+}
+letDeclaration();
+
