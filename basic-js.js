@@ -122,3 +122,53 @@ function constScope(){
     }
     console.log(x); //10
 }
+
+
+//function
+//types of function : simple function 
+//simple function
+function simpleFunction(){
+    console.log("Simple function");
+}
+
+//function with loop
+function functionWithLoop(){
+    for(let i=0; i<5; i++){
+        console.log(i);
+    }
+}
+functionWithLoop();
+
+
+
+//function with parameters
+function functionWithParameters(a, b){
+    console.log(a+b);
+}
+functionWithParameters(10, 20);
+
+
+
+
+//function with multiple parameters
+function functionWithMultipleParameters(a, b, c){
+    console.log(a+b+c);
+}
+functionWithMultipleParameters(10, 20, 30);
+
+
+
+
+//function with return
+function functionWithReturn(){
+    return "Hello";
+}
+console.log(functionWithReturn());
+
+
+
+
+//aarow function
+//arrow function is a short hand notation for function
+//arrow function does not have its own this keyword
+//arrow function does not have arguments object
