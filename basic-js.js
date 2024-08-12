@@ -79,6 +79,12 @@ letScope();
 //let keyword redeclartion is not allowed in same scope
 //let keyword reassignment is allowed in same scope
 
+//reassignment in let
+function letReassignment(){
+    let x = 10;
+    x = 20;
+    console.log(x);
+}
 
 
 
