@@ -64,7 +64,7 @@ function letDeclaration(){
 }
 letDeclaration();
 
-*/
+
 
 //scope of let
 function letScope(){
@@ -79,6 +79,8 @@ letScope();
 //let keyword redeclartion is not allowed in same scope
 //let keyword reassignment is allowed in same scope
 
+
+
 //reassignment in let
 function letReassignment(){
     let x = 10;
@@ -88,3 +90,35 @@ function letReassignment(){
 
 
 
+//hoistig in let
+//let is not hoisted
+function letHoisting(){
+    console.log(a); //error
+    let a = 10;
+    console.log(a);
+}
+letHoisting();
+
+*/
+//const declaration
+//const is block scoped
+//const is not hoisted
+//const can not be redeclared
+//const can not be reassigned
+function constDeclaration(){
+    const x = 10;
+    console.log(x);
+    //const x = 20; //error : redeclaration is not allowed in const
+    //x = 20; //error : reassignment is not allowed in const
+}
+constDeclaration();
+//const keyword redeclartion is not allowed in same scope
+//scoping in const
+function constScope(){
+    const x = 10;
+    if(true){
+        const x = 20;
+        console.log(x); //20
+    }
+    console.log(x); //10
+}
