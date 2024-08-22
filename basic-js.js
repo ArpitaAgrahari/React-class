@@ -174,13 +174,13 @@
 //arrow function does not have arguments object
 
 //arrow functinn with single expression
-const sq = (x) => x*x;
-console.log(sq(5));
+// const sq = (x) => x*x;
+// console.log(sq(5));
 
 
 //arrow function with multiple expression
-const add = (a, b) => {
-    let sum = a+b;
-    return sum;
-}
-console.log(add(10, 20));
+// const add = (a, b) => {
+//     let sum = a+b;
+//     return sum;
+// }
+// console.log(add(10, 20));
