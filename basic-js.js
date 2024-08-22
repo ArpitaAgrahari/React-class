@@ -325,3 +325,20 @@
 // const arr = [1, 2, 3, 4, 5];
 // const even = arr.filter((item) => item % 2 === 0);
 // console.log(even);
+
+
+//map
+// const arr = [1, 2, 3, 4, 5];
+// const sq = arr.map((item) => item * item);
+// console.log(sq);
+
+
+// const arr = [1,2,3,4,5];
+// const add1 = arr.map((item)=> item*2);
+// console.log(add1);
+
+
+//find
+const arr = [1, 2, 3, 4, 5];
+const find = arr.find((item) => item > 2);
+console.log(find);
