@@ -245,13 +245,39 @@
 //enclosing lexical context --> how this is written in code
 
 
-const obj = {
-    name: "John",
-    display: function(){
-        const inner = () => {
-            console.log(this);
-        };
-        inner();
-    },
-};
-obj.display();          //obj obj
+// const obj = {
+//     name: "John",
+//     display: function(){
+//         const inner = () => {
+//             console.log(this);
+//         };
+//         inner();
+//     },
+// };
+// obj.display();          //obj obj
+
+
+
+
+
+
+
+
+
+
+
+
+
+//CLASS in JAVASCRIPT
+class Student{
+    constructor(name,age){
+        this.name = name;
+        this.age = age;
+    }
+    printStudent(){
+        console.log(this.name);
+        console.log(this.age);
+    }
+}
+const student = new Student("John", 25);
+student.printStudent();
