@@ -243,3 +243,15 @@
 // };
 // obj.display();            //window obj
 //enclosing lexical context --> how this is written in code
+
+
+const obj = {
+    name: "John",
+    display: function(){
+        const inner = () => {
+            console.log(this);
+        };
+        inner();
+    },
+};
+obj.display();          //obj obj
