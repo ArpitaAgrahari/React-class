@@ -208,12 +208,27 @@
 //when you put refrenece it will give you window obj instrict mode also
 
 //this keyword in object
-const obj = {
+// const obj = {
+//     name: "John",
+//     age: 25,
+//     display: function(){
+//         console.log(this.name);
+//         console.log(this.age);
+//     }
+// }
+// obj.display();
+
+
+//call bind and apply
+//call
+const student= {
     name: "John",
-    age: 25,
-    display: function(){
-        console.log(this.name);
-        console.log(this.age);
-    }
-}
-obj.display();
+    printName: function(){
+        console.log(this);
+    },
+};
+student.printName();
+const student2 = {
+    name: "Smith",
+};
+student.printName.call(student2);
