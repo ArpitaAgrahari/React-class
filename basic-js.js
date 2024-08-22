@@ -342,3 +342,36 @@
 // const arr = [1, 2, 3, 4, 5];
 // const find = arr.find((item) => item > 2);
 // console.log(find);
+
+
+//array.from 
+// const arr = "hello";
+// const arr1 = Array.from(arr);
+// console.log(arr1);
+
+
+
+//copyWithin()
+// const arr = [1, 2, 3, 4, 5];
+// arr.copyWithin(0, 3);
+// console.log(arr);
+
+
+// //array.of
+// const arr = Array.of(1, 2, 3, 4, 5);
+// console.log(arr);
+
+
+//entries()
+const arr = [1, 2, 3, 4, 5];
+const iterator = arr.entries();
+console.log(iterator.next().value);
+console.log(iterator.next().value);
+console.log(iterator.next().value);
+console.log(iterator.next().value);
+console.log(iterator.next().value);
+console.log(iterator.next().value);
+
+
+
+
