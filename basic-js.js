@@ -219,7 +219,7 @@
 // obj.display();
 
 
-//call bind and apply
+//call bind and apply(sharing of method)
 //call
 const student= {
     name: "John",
