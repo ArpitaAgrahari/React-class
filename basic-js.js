@@ -221,14 +221,14 @@
 
 //call bind and apply(sharing of method)
 //call
-const student= {
-    name: "John",
-    printName: function(){
-        console.log(this);
-    },
-};
-student.printName();
-const student2 = {
-    name: "Smith",
-};
-student.printName.call(student2);
+// const student= {
+//     name: "John",
+//     printName: function(){
+//         console.log(this);
+//     },
+// };
+// student.printName();
+// const student2 = {
+//     name: "Smith",
+// };
+// student.printName.call(student2);
