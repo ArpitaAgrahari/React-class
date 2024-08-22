@@ -187,9 +187,22 @@
 
 
 //arrow function with object literal
-const obj = (name, age) => ({
-        name: name,
-         age: age
-        });
-const person = obj("John", 25);
-console.log(person);
+// const obj = (name, age) => ({
+//         name: name,
+//          age: age
+//         });
+// const person = obj("John", 25);
+// console.log(person);
+
+
+//use strict mode
+"use strict";
+console.log(this); //window obj
+function strictMode(){
+    console.log(this);
+}
+strictMode(); //undefined
+window.strictMode(); //window obj
+//when we use strict mode this keyword is undefined in function
+//in strict mode this keyword is window object in function
+//when you put refrenece it will give you window obj instrict mode also
