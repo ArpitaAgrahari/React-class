@@ -196,15 +196,24 @@
 
 
 //use strict mode
-"use strict";
-console.log(this); //window obj
-function strictMode(){
-    console.log(this);
-}
-strictMode(); //undefined
-window.strictMode(); //window obj
+// "use strict";
+// console.log(this);              //window obj
+// function strictMode(){
+//     console.log(this);
+// }
+// strictMode();               //undefined
+// window.strictMode();            //window obj
 //when we use strict mode this keyword is undefined in function
 //in strict mode this keyword is window object in function
 //when you put refrenece it will give you window obj instrict mode also
 
 //this keyword in object
+const obj = {
+    name: "John",
+    age: 25,
+    display: function(){
+        console.log(this.name);
+        console.log(this.age);
+    }
+}
+obj.display();
