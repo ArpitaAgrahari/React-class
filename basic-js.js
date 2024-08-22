@@ -232,3 +232,6 @@
 //     name: "Smith",
 // };
 // student.printName.call(student2);
+
+
+//this keyword in arrow function
