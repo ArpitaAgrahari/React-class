@@ -269,15 +269,15 @@
 
 
 //CLASS in JAVASCRIPT
-class Student{
-    constructor(name,age){
-        this.name = name;
-        this.age = age;
-    }
-    printStudent(){
-        console.log(this.name);
-        console.log(this.age);
-    }
-}
-const student = new Student("John", 25);
-student.printStudent();
+// class Student{
+//     constructor(name,age){
+//         this.name = name;
+//         this.age = age;
+//     }
+//     printStudent(){
+//         console.log(this.name);
+//         console.log(this.age);
+//     }
+// }
+// const student = new Student("John", 25);
+// student.printStudent();
