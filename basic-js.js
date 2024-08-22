@@ -281,3 +281,6 @@
 // }
 // const student = new Student("John", 25);
 // student.printStudent();
+
+
+//inheritance in class
