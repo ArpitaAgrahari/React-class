@@ -322,6 +322,6 @@
 // console.log(arr1);
 
 
-const arr = [1, 2, 3, 4, 5];
-const even = arr.filter((item) => item % 2 === 0);
-console.log(even);
+// const arr = [1, 2, 3, 4, 5];
+// const even = arr.filter((item) => item % 2 === 0);
+// console.log(even);
