@@ -206,3 +206,5 @@ window.strictMode(); //window obj
 //when we use strict mode this keyword is undefined in function
 //in strict mode this keyword is window object in function
 //when you put refrenece it will give you window obj instrict mode also
+
+//this keyword in object
