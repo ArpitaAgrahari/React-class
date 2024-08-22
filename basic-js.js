@@ -174,8 +174,8 @@
 //arrow function does not have arguments object
 
 //arrow functinn with single expression
-// const sq = (x) => x*x;
-// console.log(sq(5));
+const sq = (x) => x*x;
+console.log(sq(5));
 
 
 //arrow function with multiple expression
