@@ -184,3 +184,12 @@
 //     return sum;
 // }
 // console.log(add(10, 20));
+
+
+//arrow function with object literal
+const obj = (name, age) => ({
+        name: name,
+         age: age
+        });
+const person = obj("John", 25);
+console.log(person);
