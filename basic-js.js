@@ -235,3 +235,10 @@
 
 
 //this keyword in arrow function
+const obj = {
+    name: "John",
+    display: () => {
+        console.log(this);
+    },
+};
+obj.display(); //window obj
