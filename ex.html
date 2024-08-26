@@ -6,11 +6,14 @@
     <title>Document</title>
 </head>
 <body>
+    <p id="result"></p>
     <script type = "module">
         import {add, sub} from './basic-js.js';
         const a = 10;
         const b = 5;
-        console.log(add(a, b));
+        const res1 = (add(a, b));
+        const res2 = (sub(a, b));
+        document.getElementById('result').textContent = `Addition: ${res1}, Subtraction: ${res2}`;
     </script>
 </body>
 </html>

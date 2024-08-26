@@ -410,7 +410,47 @@
 //module is a file that can be executed independently
 //module is a file that can be executed in any order
 //module is a file that can be executed multiple times
-const add = (a, b) => a+b;
-const sub = (a, b) => a-b;
-export {add, sub};
+// const add = (a, b) => a+b;
+// const sub = (a, b) => a-b;
+// export {add, sub};               //use of basic-js.js file
+
+
+
+
+
+
+//craete a parent class named vehicle inside a function 
+//class have constructor which takes brand and model as parameter,private variable brand and model,and getDetails method which returns brand and model
+//add a static method compareVehicle that takes two vehicle instances and returns true if they have same brand and model otherwise false
+//then create a child class named car that extends vehicle class and adds new property year and mileage
+//the carclass should override the getDetails method to include the year and mileage in the returnd string .Add the method drive that increase the mileage by a given amount
+//finally, create a instance f the car class, log the details to the cospel,and use the static method to compare the two instances
+class Vehicle{
+    constructor(brand, model){
+        this.brand = brand;
+        this.model = model;
+    }
+    getDetails(){
+        return this.brand + " " + this.model;
+    }
+    static compareVehicle(vehicle1, vehicle2){
+        return vehicle1.brand === vehicle2.brand && vehicle1.model === vehicle2.model;
+    }
+}
+class Car extends Vehicle{
+    constructor(brand, model, year, mileage){
+        super(brand, model);
+        this.year = year;
+        this.mileage = mileage;
+    }
+    getDetails(){
+        return super.getDetails() + " " + this.year + " " + this.mileage;
+    }
+    drive(amount){
+        this.mileage += amount;
+    }
+}
+
+const car1 = new Car("xyzab", "abc", 2020, 1000);
+console.log(car1.getDetails());
 
