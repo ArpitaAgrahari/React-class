@@ -396,11 +396,21 @@
 
 
 
-//spread operator
-const arr = [1, 2, 3];
-const arr1 = [...arr, 4, 5, 6];
-console.log(arr1);
+//spread operator -- if we want to add different elements in array 
+// const arr = [1, 2, 3];
+// const arr1 = [...arr, 4, 5, 6];
+// console.log(arr1);
 
 
-
+//MODULE IN JavaScript
+//module is a piece of code that can be reused
+//module is a file that contains code
+//module is a file that exports code
+//module is a file that imports code
+//module is a file that can be executed independently
+//module is a file that can be executed in any order
+//module is a file that can be executed multiple times
+const add = (a, b) => a+b;
+const sub = (a, b) => a-b;
+export {add, sub};
 
