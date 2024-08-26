@@ -377,8 +377,29 @@
 
 
 
-//Modules in JS
+//Desctructuring in ES5---extracting values from objects and arrays
+//array destructuring
+// const arr = ['HTML', 'CSS', 'JS'];
+// var x = arr[0];
+// var y = arr[1];
+// var z = arr[2];
+// console.log(x);
+// console.log(y);
+// console.log(z);
 
+//array destructuring in ES6
+// const arr1 = ['HTML', 'CSS', 'JS'];
+// const [x1, y1, z1] = arr;
+// console.log(x1);
+// console.log(y1);
+// console.log(z1);
+
+
+
+//spread operator
+const arr = [1, 2, 3];
+const arr1 = [...arr, 4, 5, 6];
+console.log(arr1);
 
 
 
