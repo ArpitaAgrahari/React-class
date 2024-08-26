@@ -363,14 +363,22 @@
 
 
 //entries()
-const arr = [1, 2, 3, 4, 5];
-const iterator = arr.entries();
-console.log(iterator.next().value);
-console.log(iterator.next().value);
-console.log(iterator.next().value);
-console.log(iterator.next().value);
-console.log(iterator.next().value);
-console.log(iterator.next().value);
+// const arr = [1, 2, 3, 4, 5];
+// const iterator = arr.entries();
+// console.log(iterator.next().value);
+// console.log(iterator.next().value);
+// console.log(iterator.next().value);
+// console.log(iterator.next().value);
+// console.log(iterator.next().value);
+// console.log(iterator.next().value);
+
+
+
+
+
+
+//Modules in JS
+
 
 
 
