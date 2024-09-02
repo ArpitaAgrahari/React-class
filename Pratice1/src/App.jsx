@@ -16,6 +16,7 @@ const simpleComponent=()=>{
   );
 };
 
+
 export default simpleComponent;
 
 // function App() {
