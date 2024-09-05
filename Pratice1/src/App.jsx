@@ -86,6 +86,17 @@ const App=()=>{
           </ul>
         </nav>
       </header>
+      {/* main content */}
+      <main>
+        <h1>React</h1>
+        <h2>Start editing to see some magic happen!</h2>
+        <button onClick={()=>alert('Hey dont click me!!! Understood??')}>Click</button>
+        <br></br>
+        <br></br>
+      </main>
+      <footer>
+        <p>&copy; 2024 React; All rights reserved </p>
+      </footer>
     </div>
   )
 }
