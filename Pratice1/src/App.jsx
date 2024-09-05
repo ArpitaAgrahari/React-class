@@ -33,11 +33,14 @@ import './App.css'
 
 function JsxComponent(){
   return(
-    //rule 1 
+    //rule 1 :: enclose html in div tag (mandatory) 
     <div>
           <h1>Hello react!!</h1>
           <p>Start editing to see some magic happen!</p>
+          <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freecodecamp.org%2Fnews%2Freact-jsx-in-depth%2F&psig=AOvVaw3"></img>
     </div>
+    //rule 2 :: close every tag (mandatory)
+    //fragments
 
   );
 }
