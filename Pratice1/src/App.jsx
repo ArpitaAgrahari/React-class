@@ -66,6 +66,8 @@ const test=()=>{
     'div',
     null,
     '<h1>Hello react!!</h1>',
+    React.createElement('h1',null,'Hello react'),
+    React.createElement('p',null,'Start editing to see some magic happen!'),
   );
 }
 export default test;
