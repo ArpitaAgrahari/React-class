@@ -56,19 +56,19 @@
 
 
 
-import React from 'react';
-const test=()=>{
+// import React from 'react';
+// const test=()=>{
 
-  return React.createElement(
-    //types of element
-    //properties or object 
-    //children of elem
-    'div',
-    {style:{color:'powderblue'}},
-    null,
-    'Hello react!!',
-    React.createElement('h1',null,'Hello react'),
-    React.createElement('p',null,'Start editing to see some magic happen!'),
-  );
-}
-export default test;
+//   return React.createElement(
+//     //types of element
+//     //properties or object 
+//     //children of elem
+//     'div',
+//     {style:{color:'powderblue'}},
+//     null,
+//     'Hello react!!',
+//     React.createElement('h1',null,'Hello react'),
+//     React.createElement('p',null,'Start editing to see some magic happen!'),
+//   );
+// }
+// export default test;
