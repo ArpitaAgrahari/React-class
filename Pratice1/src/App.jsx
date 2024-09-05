@@ -34,7 +34,11 @@ import './App.css'
 function JsxComponent(){
   return(
     //rule 1 
-    <h1>Hello react!!</h1>
+    <div>
+          <h1>Hello react!!</h1>
+          <p>Start editing to see some magic happen!</p>
+    </div>
+
   );
 }
 
