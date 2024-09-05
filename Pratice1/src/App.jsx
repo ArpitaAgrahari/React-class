@@ -64,6 +64,7 @@ const test=()=>{
     //properties or object 
     //children of elem
     'div',
+    {style:{color:'powderblue'}},
     null,
     'Hello react!!',
     React.createElement('h1',null,'Hello react'),
