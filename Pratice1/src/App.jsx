@@ -37,7 +37,7 @@ function JsxComponent(){
     <div>
           <h1>Hello react!!</h1>
           <p>Start editing to see some magic happen!</p>
-          <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freecodecamp.org%2Fnews%2Freact-jsx-in-depth%2F&psig=AOvVaw3"></img>
+          <img src="https://i.pinimg.com/originals/be/a1/10/bea11075078b1a2992c78596ff40e05a.jpg"></img>
           {/* //rule 2 :: close every tag (mandatory)
                  //fragments */}
           <br></br>
