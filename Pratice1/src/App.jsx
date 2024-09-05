@@ -73,18 +73,21 @@
 // }
 // export default test;
 
+import './App.css';
 
 const App=()=>{
   return(
     <div className="app">
       <header className="header">
-        <nav className="nav">
-          <ul className="nav-list">
-            <li><a href="/">Home</a></li>
-            <li><a href="/">About</a></li>
-            <li><a href="/">Contact</a></li>
-          </ul>
-        </nav>
+      <nav className="nav">
+      <ul className="nav-list">
+        <li className="nav-item"><a href="/">Home</a></li>
+        <li className="nav-item"><a href="/about">About</a></li>
+        <li className="nav-item"><a href="/contact">Contact</a></li>
+        <li className="nav-item"><a href="/services">Services</a></li>
+        <li className="nav-item"><a href="/blog">Blog</a></li>
+  </ul>
+</nav>
       </header>
       {/* main content */}
       <main className="main-content">
