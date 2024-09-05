@@ -76,10 +76,10 @@
 
 const App=()=>{
   return(
-    <div>
-      <header>
-        <nav>
-          <ul>
+    <div className="app">
+      <header className="header">
+        <nav className="nav">
+          <ul className="nav-list">
             <li><a href="/">Home</a></li>
             <li><a href="/">About</a></li>
             <li><a href="/">Contact</a></li>
@@ -87,14 +87,14 @@ const App=()=>{
         </nav>
       </header>
       {/* main content */}
-      <main>
+      <main className="main-content">
         <h1>React</h1>
         <h2>Start editing to see some magic happen!</h2>
         <button onClick={()=>alert('Hey dont click me!!! Understood??')}>Click</button>
         <br></br>
         <br></br>
       </main>
-      <footer>
+      <footer className="footer">
         <p>&copy; 2024 React; All rights reserved </p>
       </footer>
     </div>
