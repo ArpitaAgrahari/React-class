@@ -65,7 +65,7 @@ const test=()=>{
     //children of elem
     'div',
     null,
-    '<h1>Hello react!!</h1>',
+    'Hello react!!',
     React.createElement('h1',null,'Hello react'),
     React.createElement('p',null,'Start editing to see some magic happen!'),
   );
