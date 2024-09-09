@@ -5,6 +5,7 @@
 import React, { useState } from 'react';
 import UserList from './component/UserList';
 import UserProfile from './component/UserProfile';
+import './App.css';
 
 const App = () => {
   const [users] = useState([
