@@ -73,35 +73,52 @@
 // }
 // export default test;
 
-import './App.css';
 
-const App=()=>{
-  return(
-    <div className="app">
-      <header className="header">
-      <nav className="nav">
-      <ul className="nav-list">
-        <li className="nav-item"><a href="/">Home</a></li>
-        <li className="nav-item"><a href="/about">About</a></li>
-        <li className="nav-item"><a href="/contact">Contact</a></li>
-        <li className="nav-item"><a href="/services">Services</a></li>
-        <li className="nav-item"><a href="/blog">Blog</a></li>
-  </ul>
-</nav>
-      </header>
-      {/* main content */}
-      <main className="main-content">
-        <h1>React</h1>
-        <h2>Start editing to see some magic happen!</h2>
-        <button onClick={()=>alert('Hey dont click me!!! Understood??')}>Click</button>
-        <br></br>
-        <br></br>
-      </main>
-      <footer className="footer">
-        <p>&copy; 2024 React; All rights reserved </p>
-      </footer>
-    </div>
-  )
+
+// import './App.css';
+
+// const App=()=>{
+//   return(
+//     <div className="app">
+//       <header className="header">
+//       <nav className="nav">
+//       <ul className="nav-list">
+//         <li className="nav-item"><a href="/">Home</a></li>
+//         <li className="nav-item"><a href="/about">About</a></li>
+//         <li className="nav-item"><a href="/contact">Contact</a></li>
+//         <li className="nav-item"><a href="/services">Services</a></li>
+//         <li className="nav-item"><a href="/blog">Blog</a></li>
+//   </ul>
+// </nav>
+//       </header>
+//       {/* main content */}
+//       <main className="main-content">
+//         <h1>React</h1>
+//         <h2>Start editing to see some magic happen!</h2>
+//         <button onClick={()=>alert('Hey dont click me!!! Understood??')}>Click</button>
+//         <br></br>
+//         <br></br>
+//       </main>
+//       <footer className="footer">
+//         <p>&copy; 2024 React; All rights reserved </p>
+//       </footer>
+//     </div>
+//   )
+// }
+
+// export default App;
+
+
+
+import React from 'react';
+function Activity(){
+    return React.createElement(      
+        'div',
+        {style:{backgroundColor:'yellow',position:'fixed',top:'50%',left:'50%',transform:'translate(-50%, -50%)',height:'170px',width:'450px'}},
+        React.createElement('h1',{style:{color:'red', textAlign:'center'}},'LPU'),
+        React.createElement('h2',{style:{color:'red', textAlign:'center'}},'Transforming Education, Transforming India')
+        
+    );
 }
 
-export default App;
+export default Activity;
