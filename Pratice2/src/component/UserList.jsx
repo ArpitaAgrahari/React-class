@@ -1,5 +1,5 @@
 import React from 'react';
-
+// added user click event handler
 const UserList = ({ users, onUserClick }) => {
   return (
     <div>
