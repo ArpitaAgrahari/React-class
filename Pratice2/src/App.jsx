@@ -1,35 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+//you will react app that display a list og user and allow user view detailed informstion of selected user.this app will consit of follwin gcomponents
+//1. UserList: display list of user. clicking on a user will trigger callback fucntion.
+//2. userprofile: display detailed information of selected user.
+//3.app: maannges the data and handles user interaction.it will pass data to UserList and UserProfile components via props.
+import React, { useState } from 'react';
+import UserList from './component/UserList';
+import UserProfile from './component/UserProfile';
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  const [users] = useState([
+    { id: 1, name: 'cde', email: 'cde@example.com', phone: '123-456-7890' },
+    { id: 2, name: 'def', email: 'def@example.com', phone: '098-765-4321' },
+    { id: 3, name: 'abc', email: 'abc@exmaple.com',phone: '123-456-7890' },
+  ]);
+
+  const [selectedUser, setSelectedUser] = useState(null);
+
+  const handleUserClick = (user) => {
+    setSelectedUser(user);
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div>
+      <UserList users={users} onUserClick={handleUserClick} />
+      <UserProfile user={selectedUser} />
+    </div>
+  );
+};
 
-export default App
+export default App;
