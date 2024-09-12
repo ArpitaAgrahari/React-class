@@ -10,7 +10,7 @@ import { useState } from "react";
 function App(){
     let count=0;
     function handleApp(){
-        count+=1;
+            count+=1;
         console.log(count);
     }
     return (
