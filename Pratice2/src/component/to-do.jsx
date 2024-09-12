@@ -3,3 +3,18 @@
 
 import React, { Component } from 'react';
 import './to-do.css';
+
+
+function Task(props) {
+    return (
+        <div className="task">
+        <span>{props.text}</span>
+        <button onClick={props.onDelete}>Delete</button>
+        <button onClick={props.onEdit}>Edit</button>
+        <button onClick={props.onDone}>Done</button>
+        </div>
+    );
+}
+export default Task;
+
+
