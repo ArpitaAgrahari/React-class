@@ -32,3 +32,10 @@ li {
 button {
   margin-left: 10px;
 }
+
+input{
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid black;
+
+}
