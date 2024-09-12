@@ -9,18 +9,28 @@
 
 
 
-import { useState } from "react";
-function App(){
-    let count=0;
-    function handleApp(){
-            count+=1;
-        console.log(count);
-    }
-    return (
-        <div>
-        <p>{count}</p>
-        <button onClick={handleApp}>Add</button>
-        <button>Sub</button>
-        </div>
-    )
+import { useState } from 'react';
+
+export default function MyApp() {
+  return (
+    <div>
+      <h1>Counters that update separately</h1>
+      <MyButton />
+      <MyButton />
+    </div>
+  );
+}
+
+function MyButton() {
+  const [count, setCount] = useState(0);
+
+  function handleClick() {
+    setCount(count + 1);
+  }
+
+  return (
+    <button onClick={handleClick}>
+      Clicked {count} times
+    </button>
+  );
 }
