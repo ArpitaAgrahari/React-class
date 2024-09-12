@@ -1,18 +1,35 @@
-//you will react app that display a list og user and allow user view detailed informstion of selected user.this app will consit of follwin gcomponents
-//1. UserList: display list of user. clicking on a user will trigger callback fucntion.
-//2. userprofile: display detailed information of selected user.
-//3.app: maannges the data and handles user interaction.it will pass data to UserList and UserProfile components via props.
 import React, { useState } from 'react';
-import counter from './component/counter';
+import TaskForm from './component/TaskForm';
+import TaskList from './component/TaskList';
 import './App.css';
 
 function App() {
+  const [tasks, setTasks] = useState([]);
+  const [editTask, setEditTask] = useState(null);
+
+  const addTask = (task) => {
+    setTasks([...tasks, { id: Date.now(), text: task, done: false }]);
+  };
+
+  const deleteTask = (id) => {
+    setTasks(tasks.filter(task => task.id !== id));
+  };
+
+  const editTaskText = (id, newText) => {
+    setTasks(tasks.map(task => task.id === id ? { ...task, text: newText } : task));
+  };
+
+  const toggleTaskDone = (id) => {
+    setTasks(tasks.map(task => task.id === id ? { ...task, done: !task.done } : task));
+  };
+
   return (
-    <div>
-      <h1>Counters that update separately</h1>
-      <counter />
-      <counter />
+    <div className="App">
+      <h1>To-Do List</h1>
+      <TaskForm addTask={addTask} editTask={editTask} setEditTask={setEditTask} editTaskText={editTaskText} />
+      <TaskList tasks={tasks} deleteTask={deleteTask} toggleTaskDone={toggleTaskDone} setEditTask={setEditTask} />
     </div>
   );
 }
+
 export default App;

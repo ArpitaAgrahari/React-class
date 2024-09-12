@@ -8,6 +8,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import MyApp from './counter';
+import ToDoApp from './components/ToDoApp';
+import './App.css';
 
-ReactDOM.render(<MyApp />, document.getElementById('root'));
+ReactDOM.render(<ToDoApp />, document.getElementById('root'));
