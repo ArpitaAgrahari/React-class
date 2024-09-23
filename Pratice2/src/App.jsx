@@ -62,3 +62,13 @@ export default UserContext;
 
 
 
+
+const AuthContext = createContext({
+  logout:()=>{}
+});
+
+export const AuthProvider=()=>{
+  const [isAuthencicated, setIsAuthencicated]=useState(false);
+  
+}
+
