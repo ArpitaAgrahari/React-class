@@ -36,3 +36,52 @@ export default App;
 
 
 
+
+
+
+import { createContext } from 'react';
+const UserContext =createContext();
+
+
+const ParentComponent=()=>{
+
+  const user={
+    name: xyz,
+    age:78;
+  };
+  return (
+    <UserContext.Provider value={user}>
+      <div>
+        <h1>Hi </h1>
+        <p>Name: {user.name},<Age:>user.age</p>
+      </div>
+    </UserContext.Provider>
+
+  )
+}
+export default UserContext;
+
+
+
+
+const AuthContext = createContext({
+  logout:()=>{}
+});
+
+export const AuthProvider=()=>{
+  const [isAuthencicated, setIsAuthencicated]=useState(false);
+  const login=()=>{
+    console.log("Login...")
+    setIsAuthencicated(true)
+    console.log("isAuthencicraed",true)
+    )
+  }
+  return(
+    <AuthContext.Provider value={(isAuthencicated,login,logout)}>
+      {child}
+      </AuthContext.Provider>
+  )
+}
+
+
+
