@@ -42,4 +42,23 @@ import { createContext } from 'react';
 const UserContext =createContext();
 
 
+const ParentComponent=()=>{
+
+  const user={
+    name: xyz,
+    age:78;
+  };
+  return (
+    <UserContext.Provider value={user}>
+      <div>
+        <h1>Hi </h1>
+        <p>Name: {user.name},<Age:>user.age</p>
+      </div>
+    </UserContext.Provider>
+
+  )
+}
 export default UserContext;
+
+
+
