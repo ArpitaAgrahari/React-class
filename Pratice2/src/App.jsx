@@ -69,6 +69,14 @@ const AuthContext = createContext({
 
 export const AuthProvider=()=>{
   const [isAuthencicated, setIsAuthencicated]=useState(false);
-  
+  const login=()=>{
+    console.log("Login...")
+    setIsAuthencicated(true)
+    console.log("isAuthencicraed",true)
+    )
+  }
+  return(
+    <AuthContext.Provider value={(isAuthencicated,login,logout)}>
+  )
 }
 
