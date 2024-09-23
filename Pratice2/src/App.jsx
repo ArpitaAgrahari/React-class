@@ -74,7 +74,7 @@ export const AuthProvider=()=>{
     console.log("Login...")
     setIsAuthencicated(true)
     console.log("isAuthencicraed",true)
-    )
+    );
   }
   return(
     <AuthContext.Provider value={(isAuthencicated,login,logout)}>
@@ -82,6 +82,6 @@ export const AuthProvider=()=>{
       </AuthContext.Provider>
   );
 }
-
+export default AuthContext;
 
 
