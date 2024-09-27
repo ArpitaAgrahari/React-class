@@ -1,12 +1,9 @@
 
-
-
 function duplicatedArray(arr) {
     return [...arr, ...arr];
 }
 
-
 const originalArray = [1, 2, 3, 4];
-const newArray = duplicatedArray(originalArray);
+const duplicateArray = duplicatedArray(originalArray);
 
-console.log(newArray); 
+console.log(duplicateArray); 
