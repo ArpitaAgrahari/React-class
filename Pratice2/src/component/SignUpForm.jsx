@@ -4,6 +4,8 @@ function SignUpForm() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+
+  
   return (
     <div className="signup-container">
       <h2>Signup</h2>
