@@ -1,8 +1,10 @@
+export default UseCallbackchild;
 import { useState, useCallback } from 'react';
-function UseCallbackchild() {
+function UseCallbackchild({onIncrement}) {
+        console.log('UseCallbackChild Render');
         return(
             <div>
-                <button> Incremeent</button>
+                <button onClick={onIncrement}> Incremeent</button>
             </div>
         )
 
