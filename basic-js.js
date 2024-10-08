@@ -464,17 +464,3 @@ console.log(Car.compareVehicle(car1, car2));
 
 
 
-//callback functiion
-
-import { useState, useCallback } from 'react';
-function UseCallbackchild() {
-        return(
-            <div>
-                <button> Incremeent</button>
-                <value={test}
-                placeholder="Enter the value"] 
-            </div>
-        )
-
-}
-export default UseCallbackchild;
