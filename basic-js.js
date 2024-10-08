@@ -471,6 +471,8 @@ function UseCallbackchild() {
         return(
             <div>
                 <button> Incremeent</button>
+                <value={test}
+                placeholder="Enter the value"] 
             </div>
         )
 
