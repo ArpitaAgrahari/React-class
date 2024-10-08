@@ -458,3 +458,21 @@ const car2 = new Car("xyzab", "abc", 2020, 1000);
 console.log(car1.getDetails());
 console.log(car2.getDetails());
 console.log(Car.compareVehicle(car1, car2));
+
+
+
+
+
+
+//callback functiion
+
+import { useState, useCallback } from 'react';
+function UseCallbackchild() {
+        return(
+            <div>
+                <button> Incremeent</button>
+            </div>
+        )
+
+}
+export default UseCallbackchild;
