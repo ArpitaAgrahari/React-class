@@ -1,4 +1,3 @@
-export default UseCallbackchild;
 import { useState, useCallback } from 'react';
 function UseCallbackchild({onIncrement}) {
         console.log('UseCallbackChild Render');
