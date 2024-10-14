@@ -1,124 +1,116 @@
-// import { useState } from 'react'
-// import './App.css'
+// App.js
+import React, { useState } from 'react';
+import './App.css';
 
-// // const simpleComponent=()=>{
-// //   const handleClick=()=>{
-// //     const message=document.getElementById('message');
-// //     message.textContent='Hello, React!';
-// //   };
-// //   return(  
-// //       <div>
-// //       <h1>React</h1>
-// //       <h2>Start editing to see some magic happen!</h2>
-// //       <button onClick={handleClick}>Click</button>
-// //       <p id="message"></p>
-// //     </div>
-// //   );
-// // };
+function App() {
+  const [formData, setFormData] = useState({
+    loginEmail: '',
+    loginPassword: '',
+    signupName: '',
+    signupEmail: '',
+    signupPassword: '',
+  });
 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
 
-// // export default simpleComponent;
+  const handleLoginSubmit = (e) => {
+    e.preventDefault();
+    alert(`Logged in as ${formData.loginEmail}`);
+  };
+  
 
-// // function App() {
-// //   return (
-// //     <div>
-// //       <h1>React</h1>
-// //       <h2>Start editing to see some magic happen!</h2>
-// //     </div>
-// //   )
-// // }
+  const handleSignupSubmit = (e) => {
+    e.preventDefault();
+    alert(`Signed up as ${formData.signupEmail}`);
+  };
 
-// // export default App
+  return (
+    <div className="container">
+      <div className="form-container">
+        {/* Login Form */}
+        <div className="form-section login-section">
+          <h2>Login</h2>
+          <form onSubmit={handleLoginSubmit}>
+            <div className="form-group">
+              <label>Email</label>
+              <input
+                type="email"
+                name="loginEmail"
+                value={formData.loginEmail}
+                onChange={handleChange}
+                placeholder="Enter your email"
+                required
+              />
+            </div>
 
+            <div className="form-group">
+              <label>Password</label>
+              <input
+                type="password"
+                name="loginPassword"
+                value={formData.loginPassword}
+                onChange={handleChange}
+                placeholder="Enter your password"
+                required
+              />
+            </div>
 
-// function JsxComponent(){
-//   return(
-//     //rule 1 :: enclose html in div tag (mandatory) 
-//     <div>
-//           <h1>Hello react!!</h1>
-//           <p>Start editing to see some magic happen!</p>
-//           <img src="https://i.pinimg.com/originals/be/a1/10/bea11075078b1a2992c78596ff40e05a.jpg"></img>
-//           {/* //rule 2 :: close every tag (mandatory)
-//                  //fragments */}
-//           <br></br>
-//           <ul>
-//             <li>React</li>
-//             <li>Hi</li>
-//           </ul>
-//           <button onClick={()=>alert('Hey dont click me!!! Understood??')}>Click</button>
-//     </div>
-//     //rule 3:: use camelCase for html attributes
+            <button type="submit" className="submit-btn">Login</button>
+          </form>
+        </div>
 
-//   );
-// }
+        {/* Signup Form */}
+        <div className="form-section signup-section">
+          <h2>Sign Up</h2>
+          <form onSubmit={handleSignupSubmit}>
+            <div className="form-group">
+              <label>Name</label>
+              <input
+                type="text"
+                name="signupName"
+                value={formData.signupName}
+                onChange={handleChange}
+                placeholder="Enter your name"
+                required
+              />
+            </div>
 
-// export default JsxComponent;
+            <div className="form-group">
+              <label>Email</label>
+              <input
+                type="email"
+                name="signupEmail"
+                value={formData.signupEmail}
+                onChange={handleChange}
+                placeholder="Enter your email"
+                required
+              />
+            </div>
 
+            <div className="form-group">
+              <label>Password</label>
+              <input
+                type="password"
+                name="signupPassword"
+                value={formData.signupPassword}
+                onChange={handleChange}
+                placeholder="Enter your password"
+                required
+              />
+            </div>
 
-
-// import React from 'react';
-// const test=()=>{
-
-//   return React.createElement(
-//     //types of element
-//     //properties or object 
-//     //children of elem
-//     'div',
-//     {style:{color:'powderblue'}},
-//     null,
-//     'Hello react!!',
-//     React.createElement('h1',null,'Hello react'),
-//     React.createElement('p',null,'Start editing to see some magic happen!'),
-//   );
-// }
-// export default test;
-
-
-
-// import './App.css';
-
-// const App=()=>{
-//   return(
-//     <div className="app">
-//       <header className="header">
-//       <nav className="nav">
-//       <ul className="nav-list">
-//         <li className="nav-item"><a href="/">Home</a></li>
-//         <li className="nav-item"><a href="/about">About</a></li>
-//         <li className="nav-item"><a href="/contact">Contact</a></li>
-//         <li className="nav-item"><a href="/services">Services</a></li>
-//         <li className="nav-item"><a href="/blog">Blog</a></li>
-//   </ul>
-// </nav>
-//       </header>
-//       {/* main content */}
-//       <main className="main-content">
-//         <h1>React</h1>
-//         <h2>Start editing to see some magic happen!</h2>
-//         <button onClick={()=>alert('Hey dont click me!!! Understood??')}>Click</button>
-//         <br></br>
-//         <br></br>
-//       </main>
-//       <footer className="footer">
-//         <p>&copy; 2024 React; All rights reserved </p>
-//       </footer>
-//     </div>
-//   )
-// }
-
-// export default App;
-
-
-
-import React from 'react';
-function Activity(){
-    return React.createElement(      
-        'div',
-        {style:{backgroundColor:'yellow',position:'fixed',top:'50%',left:'50%',transform:'translate(-50%, -50%)',height:'170px',width:'450px'}},
-        React.createElement('h1',{style:{color:'red', textAlign:'center'}},'LPU'),
-        React.createElement('h2',{style:{color:'red', textAlign:'center'}},'Transforming Education, Transforming India')
-        
-    );
+            <button type="submit" className="submit-btn">Sign Up</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default Activity;
+export default App;
