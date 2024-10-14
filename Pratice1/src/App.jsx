@@ -10,7 +10,6 @@ function App() {
     signupEmail: '',
     signupPassword: '',
   });
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
