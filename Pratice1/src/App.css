@@ -1,52 +1,50 @@
 /* App.css */
-body {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
-    background-color: #f3f4f6;
   }
   
-  .container {
-    min-height: 100vh;
+  body {
+    background: linear-gradient(135deg, #1e90ff, #00bfff);
+    height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-    background-color: #e8eaed;
+    justify-content: center;
+  }
+  
+  .outer-container {
+    width: 100%;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
   }
   
   .form-container {
     display: flex;
-    width: 80%;
-    max-width: 900px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
   
   .form-section {
-    flex: 1;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
   h2 {
+    text-align: center;
     margin-bottom: 1rem;
   }
   
   .form-group {
-    width: 100%;
     margin-bottom: 1rem;
-  }
-  
-  .form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
   }
   
   .form-group input {
@@ -56,10 +54,23 @@ body {
     border-radius: 5px;
   }
   
+  .forgot-password {
+    display: block;
+    text-align: right;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: #1e90ff;
+    text-decoration: none;
+  }
+  
+  .forgot-password:hover {
+    text-decoration: underline;
+  }
+  
   .submit-btn {
     width: 100%;
     padding: 0.8rem;
-    background-color: #4caf50;
+    background-color: #1e90ff;
     color: white;
     border: none;
     border-radius: 5px;
@@ -69,14 +80,24 @@ body {
   }
   
   .submit-btn:hover {
-    background-color: #45a049;
+    background-color: #00bfff;
   }
   
-  .login-section {
-    background-color: #f0f2f5;
+  .signup-text {
+    text-align: center;
+    margin-top: 1rem;
   }
   
-  .signup-section {
-    background-color: #fff;
+  .signup-text a {
+    color: #1e90ff;
+    text-decoration: none;
+  }
+  
+  .signup-text a:hover {
+    text-decoration: underline;
+  }
+  
+  .gap {
+    height: 20px; /* Adjust the gap height as needed */
   }
   

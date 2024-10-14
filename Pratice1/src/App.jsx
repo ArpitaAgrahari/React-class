@@ -3,16 +3,28 @@ import React, { useState } from 'react';
 import './App.css';
 
 function App() {
-  const [formData, setFormData] = useState({
-    loginEmail: '',
-    loginPassword: '',
-    signupName: '',
-    signupEmail: '',
-    signupPassword: '',
+  const [loginData, setLoginData] = useState({
+    email: '',
+    password: '',
   });
-  const handleChange = (e) => {
+
+  const [signupData, setSignupData] = useState({
+    name: '',
+    email: '',
+    password: '',
+  });
+
+  const handleLoginChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prevData) => ({
+    setLoginData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSignupChange = (e) => {
+    const { name, value } = e.target;
+    setSignupData((prevData) => ({
       ...prevData,
       [name]: value,
     }));
@@ -20,91 +32,87 @@ function App() {
 
   const handleLoginSubmit = (e) => {
     e.preventDefault();
-    alert(`Logged in as ${formData.loginEmail}`);
+    alert(`Logged in as ${loginData.email}`);
   };
-  
 
   const handleSignupSubmit = (e) => {
     e.preventDefault();
-    alert(`Signed up as ${formData.signupEmail}`);
+    alert(`Signed up as ${signupData.email}`);
   };
 
   return (
     <div className="container">
       <div className="form-container">
         {/* Login Form */}
-        <div className="form-section login-section">
-          <h2>Login</h2>
+        <div className="form-section">
+          <h2>Login Form</h2>
           <form onSubmit={handleLoginSubmit}>
             <div className="form-group">
-              <label>Email</label>
               <input
                 type="email"
-                name="loginEmail"
-                value={formData.loginEmail}
-                onChange={handleChange}
-                placeholder="Enter your email"
+                name="email"
+                value={loginData.email}
+                onChange={handleLoginChange}
+                placeholder="Email Address"
                 required
               />
             </div>
-
             <div className="form-group">
-              <label>Password</label>
               <input
                 type="password"
-                name="loginPassword"
-                value={formData.loginPassword}
-                onChange={handleChange}
-                placeholder="Enter your password"
+                name="password"
+                value={loginData.password}
+                onChange={handleLoginChange}
+                placeholder="Password"
                 required
               />
             </div>
-
+            <a href="#" className="forgot-password">Forgot password?</a>
             <button type="submit" className="submit-btn">Login</button>
+            <p className="toggle-form">
+              Not a member? <a href="#" onClick={() => alert('Switch to Signup')}>Signup now</a>
+            </p>
           </form>
         </div>
 
+        {/* Gap */}
+        <div className="gap"></div>
+
         {/* Signup Form */}
-        <div className="form-section signup-section">
-          <h2>Sign Up</h2>
+        <div className="form-section">
+          <h2>Signup Form</h2>
           <form onSubmit={handleSignupSubmit}>
             <div className="form-group">
-              <label>Name</label>
               <input
                 type="text"
-                name="signupName"
-                value={formData.signupName}
-                onChange={handleChange}
-                placeholder="Enter your name"
+                name="name"
+                value={signupData.name}
+                onChange={handleSignupChange}
+                placeholder="Full Name"
                 required
               />
             </div>
-
             <div className="form-group">
-              <label>Email</label>
               <input
                 type="email"
-                name="signupEmail"
-                value={formData.signupEmail}
-                onChange={handleChange}
-                placeholder="Enter your email"
+                name="email"
+                value={signupData.email}
+                onChange={handleSignupChange}
+                placeholder="Email Address"
                 required
               />
             </div>
-
             <div className="form-group">
-              <label>Password</label>
               <input
                 type="password"
-                name="signupPassword"
-                value={formData.signupPassword}
-                onChange={handleChange}
-                placeholder="Enter your password"
+                name="password"
+                value={signupData.password}
+                onChange={handleSignupChange}
+                placeholder="Password"
                 required
               />
             </div>
-
-            <button type="submit" className="submit-btn">Sign Up</button>
+            <button type="submit" className="submit-btn">Signup</button>
           </form>
         </div>
       </div>
