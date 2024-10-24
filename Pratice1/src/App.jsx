@@ -50,8 +50,13 @@ const App=()=>{
     }
   }
   const createNewCode=async()=>{
+    try{
     const response=await axios.post('https://jsonplaceholder.typicode.com/users')
-    
+    setNewCode(response.data);
+    }catch(error){
+      console.log('');
+    }
+
   }
   useEffect(()=>{
     fetchPosts();
