@@ -40,6 +40,7 @@ import React, { useEffect } from "react"
 import axios from 'axios';
 const App=()=>{
   const [posts, setPosts]=useState([])
+  const [newCode, setNewCode] =useState([]);
   const fetchPosts = async()=>{
     try{
       const response  = await axios.get('https://jsonplaceholder.typicode.com/users')
@@ -47,6 +48,10 @@ const App=()=>{
     }catch(error){
       console.log('error')
     }
+  }
+  const createNewCode=async()=>{
+    const response=await axios.post('https://jsonplaceholder.typicode.com/users')
+    
   }
   useEffect(()=>{
     fetchPosts();
