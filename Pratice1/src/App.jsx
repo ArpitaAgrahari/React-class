@@ -1,64 +1,27 @@
-// import React, { useState, useEffect } from 'react';
-// import axios from 'axios';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Home from './pages/Home';
+import LoanCalculatorPage from './pages/LoanCalculatorPage';
+import PersonalInfoPage from './pages/PersonalInfoPage';
+import './App.css';
 
-const { useState } = require("react")
-
-// const App = () => {
-//   const [users, setUsers] = useState([]);
-//   const [isError, setIsError] = useState('');
-
-//   useEffect(() => {
-//     axios.get('https://jsonplaceholder.typicode.com/users')
-//       .then(response => {
-//         setUsers(response.data);
-//       })
-//       .catch(error => {
-//         setIsError('Error fetching data');
-//       });
-//   }, []);
-
-//   return (
-//     <div>
-//       <h1>Axios in React</h1>
-//       {isError && <h3>{isError}</h3>}
-//       <div>
-//         {users.map((user) => (
-//           <div key={user.id}>
-//             <h3>{user.name}</h3>
-//             <p>{user.email}</p>
-//             <p>{user.phone}</p>
-//             <p>{user.website}</p>
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default App;
-import React, { useEffect } from "react"
-import axios from 'axios';
-const App=()=>{
-  const [posts, setPosts]=useState([])
-  const [newCode, setNewCode] =useState([]);
-  const fetchPosts = async()=>{
-    try{
-      const response  = await axios.get('https://jsonplaceholder.typicode.com/users')
-      setPosts(response.data);
-    }catch(error){
-      console.log('error')
-    }
-  }
-  const createNewCode=async()=>{
-    try{
-    const response=await axios.post('https://jsonplaceholder.typicode.com/users')
-    setNewCode(response.data);
-    }catch(error){
-      console.log('');
-    }
-
-  }
-  useEffect(()=>{
-    fetchPosts();
-  },[])
+function App() {
+  return (
+    <Router>
+      <div className="App">
+        <nav>
+          <Link to="/">Home</Link>
+          <Link to="/loan-calculator">Loan Calculator</Link>
+          <Link to="/personal-info-form">Personal Info Form</Link>
+        </nav>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/loan-calculator" element={<LoanCalculatorPage />} />
+          <Route path="/personal-info-form" element={<PersonalInfoPage />} />
+        </Routes>
+      </div>
+    </Router>
+  );
 }
+
+export default App;
