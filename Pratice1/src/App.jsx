@@ -5,7 +5,7 @@ import LoanCalculatorPage from './pages/LoanCalculatorPage';
 import PersonalInfoPage from './pages/PersonalInfoPage';
 import './App.css';
 
-function App() {
+function App(){
   return (
     <Router>
       <div className="App">

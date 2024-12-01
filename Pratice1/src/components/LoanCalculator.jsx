@@ -1,19 +1,17 @@
 import React, { useState } from 'react';
 
-function LoanCalculator() {
-  const [loanAmount, setLoanAmount] = useState('');
-  const [interestRate, setInterestRate] = useState('');
-  const [loanTerm, setLoanTerm] = useState('');
-  const [monthlyPayment, setMonthlyPayment] = useState(null);
-  const [history, setHistory] = useState([]);
-
-  const calculateLoan = () => {
-    if (!loanAmount || !interestRate || !loanTerm) return;
-
+function LoanCalculator(){
+  const [loanAmount,setLoanAmount]=useState('');
+  const [interestRate,setInterestRate]=useState('');
+  const [loanTerm,setLoanTerm]=useState('');
+  const [monthlyPayment,setMonthlyPayment]=useState(null);
+  const [history,setHistory]=useState([]);
+  const calculateLoan=()=>{
+    if (!loanAmount||!interestRate||!loanTerm) return;
     const principal = parseFloat(loanAmount);
-    const interest = parseFloat(interestRate) / 100 / 12;
-    const payments = parseFloat(loanTerm) * 12;
-    const monthly = (principal * interest) / (1 - Math.pow(1 + interest, -payments));
+    const interest = parseFloat(interestRate)/100/12;
+    const payments = parseFloat(loanTerm)*12;
+    const monthly = (principal * interest)/(1-Math.pow(1 + interest, -payments));
 
     if (isNaN(monthly)) return;
 
@@ -37,25 +35,13 @@ function LoanCalculator() {
   return (
     <div>
       <h2>Loan Calculator</h2>
-      <input
-        type="number"
-        id="loanAmount"
-        placeholder="Loan Amount"
-        value={loanAmount}
+      <input type="number" id="loanAmount" placeholder="Loan Amount" value={loanAmount}
         onChange={(e) => setLoanAmount(e.target.value)}
       />
-      <input
-        type="number"
-        id="interestRate"
-        placeholder="Interest Rate (%)"
-        value={interestRate}
+      <input type="number" id="interestRate" placeholder="Interest Rate (%)" value={interestRate}
         onChange={(e) => setInterestRate(e.target.value)}
       />
-      <input
-        type="number"
-        id="loanTerm"
-        placeholder="Loan Term (years)"
-        value={loanTerm}
+      <input type="number" id="loanTerm" placeholder="LoanTerm(years)" value={loanTerm}
         onChange={(e) => setLoanTerm(e.target.value)}
       />
       <button onClick={calculateLoan}>Calculate</button>
